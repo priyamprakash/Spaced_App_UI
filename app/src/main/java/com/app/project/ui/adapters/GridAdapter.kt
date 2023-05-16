@@ -7,9 +7,10 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import com.app.project.R
+import com.app.project.interfaces.CellClickListener
 import com.app.project.model.GridItem
 
-class GridAdapter(private val items: List<GridItem>) : BaseAdapter() {
+class GridAdapter(private val items: List<GridItem>, private val cellClickListener: CellClickListener) : BaseAdapter() {
 
     override fun getCount() = items.size
 
@@ -26,6 +27,13 @@ class GridAdapter(private val items: List<GridItem>) : BaseAdapter() {
         val item = getItem(position)
         imageView.setImageResource(item.imageRes)
         textView.text = item.text
+
+        imageView.setOnClickListener {
+            cellClickListener.onCellClickListener(
+                position,
+                "Open Dialog"
+            )
+        }
 
         return view
     }

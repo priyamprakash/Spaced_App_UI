@@ -18,6 +18,14 @@ class SliderAdapter(private val items: List<Int>,private val cellClickListener: 
         val button = view.findViewById<Button>(R.id.button)
 
         imageView.setImageResource(items[position])
+
+        imageView.setOnClickListener {
+            cellClickListener.onCellClickListener(
+                items[position],
+               "Open Dialog"
+            )
+        }
+
         button.setOnClickListener {
             cellClickListener.onCellClickListener(
                 items[position],

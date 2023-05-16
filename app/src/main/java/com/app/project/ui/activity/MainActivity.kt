@@ -52,15 +52,15 @@ class MainActivity : AppCompatActivity() , CellClickListener {
     private fun setUpGridView() {
         val gridView = findViewById<GridView>(R.id.gridView)
         val items = listOf(
-            GridItem(R.drawable.location_one, "Item 1"),
-            GridItem(R.drawable.location_two, "Item 2"),
-            GridItem(R.drawable.location_three, "Item 3"),
-            GridItem(R.drawable.location_one, "Item 4"),
-            GridItem(R.drawable.location_two, "Item 5"),
-            GridItem(R.drawable.location_one, "Item 6")
+            GridItem(R.drawable.location_one, "Nature"),
+            GridItem(R.drawable.location_two, "Futuristic"),
+            GridItem(R.drawable.location_three, "Party"),
+            GridItem(R.drawable.location_one, "Green"),
+            GridItem(R.drawable.location_two, "Thriller"),
+            GridItem(R.drawable.location_three, "Club")
         )
 
-        val adapter = GridAdapter(items)
+        val adapter = GridAdapter(items, this)
         gridView.numColumns = 2
         gridView.adapter = adapter
     }

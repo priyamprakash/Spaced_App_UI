@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- CalendarViewStyle.xml -->
+
+
+    <style name="CustomCalendarViewStyle" parent="@android:style/Widget.CalendarView">
+        <item name="android:dateTextAppearance">@style/CustomCalendarDateTextAppearance</item>
+        <item name="android:weekDayTextAppearance">@style/CustomCalendarWeekDayTextAppearance</item>
+    </style>
+
+    <style name="CustomCalendarDateTextAppearance" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">#FFFFFF</item>
+        <!-- Set the date text color to white -->
+    </style>
+
+    <style name="CustomCalendarWeekDayTextAppearance" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">#FFFFFF</item> <!-- Set the week day text color to white -->
+    </style>
+
+
+
+
+
+</resources>
